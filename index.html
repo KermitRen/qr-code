@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Header -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="shortcut icon" href="/assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<!-- Body -->
+<body>
+    <header id="headerBar">
+        <p id="headerText"> QR Code Generator</p>
+    </header>
+
+    <content id="content">  
+        <div id="content-left">
+            <h1 id="contentTitle">Code Generator</h1>
+            <p id="contentText">
+                QR Codes allow smartphone users to access your website simply and quickly. <br><br>
+                Enter the URL of your website below to generate a QR Code and download the image.
+            </p>
+            <form id="inputForm">
+                <input class="formElement" id="urlInput" type="text" placeholder="Enter a URL" autocomplete="off" spellcheck="false">
+                <select class="formElement" id="sizeInput">
+                    <option value="128">128 &times; 128</option>
+                    <option value="256" selected>256 &times; 256</option>
+                    <option value="512">512 &times; 512</option>
+                </select>
+                <button class="formElement" id="submitButton" type="submit">Generate QR Code</button>
+            </form>
+
+        </div>
+        <div id="content-right">
+            <img src="/assets/qr-code.png">
+        </div>
+    </content>
+    <div id="result">
+        <div id="qrCode"></div>
+        <div id="resultButtons">
+            <a id="saveButton" class="resultButton" href="" download="QR-Code">Save Image</a>
+            <div id="clearButton" class="resultButton">Clear</div>
+        </div>
+    </div>
+    <div id="spinner">
+        <div id="spinnerWheel"></div>
+        <p id="spinnerText">Please Wait</p>
+    </div>
+</body>
+</html>

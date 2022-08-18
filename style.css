@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+#headerBar {
+  position: relative;
+  background-color: rgb(44, 154, 44);
+  height: 6vh;
+  padding: 0 5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 740px) {
+  #headerBar {
+    justify-content: left;
+    margin-bottom: 50px;
+  }
+}
+
+#headerText {
+  color: white;
+  font-family: "Kanit", Verdana, sans-serif;
+  font-size: 1.35em;
+  font-weight: 500;
+}
+
+#content {
+  padding: 0 10%;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: "Kanit", Verdana, sans-serif;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 740px) {
+  #content {
+    flex-flow: row nowrap;
+    padding: 0 18%;
+    margin-bottom: 50px;
+  }
+}
+
+#content-left {
+  width: 100%;
+  padding: none;
+  font-family: "Jost", Verdana, sans-serif;
+  margin-bottom: 25px;
+  order: 2;
+}
+@media screen and (min-width: 740px) {
+  #content-left {
+    width: 60%;
+    padding: 0 10%;
+    margin-bottom: 0px;
+    order: 1;
+  }
+}
+#content-left #contentTitle {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+#content-left #contentText {
+  margin-bottom: 50px;
+  font-size: 1.2em;
+  line-height: 120%;
+}
+
+#inputForm .formElement {
+  padding: 10px 15px;
+  font-size: 1.4em;
+  width: 100%;
+}
+#inputForm .formElement:not(:last-child) {
+  margin-bottom: 20px;
+}
+#inputForm #urlInput {
+  border: 1px solid rgba(55, 55, 55, 0.3);
+  outline: none;
+}
+#inputForm #urlInput:focus, #inputForm #urlInput:hover {
+  border: 1px solid rgb(55, 55, 55);
+}
+#inputForm #sizeInput {
+  border: 1px solid rgba(55, 55, 55, 0.3);
+  outline: none;
+}
+#inputForm #sizeInput:focus, #inputForm #sizeInput:hover {
+  border: 1px solid rgb(55, 55, 55);
+}
+#inputForm #submitButton {
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+#inputForm #submitButton:hover {
+  background-color: black;
+}
+
+#content-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 740px) {
+  #content-right {
+    width: 40%;
+    order: 2;
+    margin-bottom: 0px;
+  }
+}
+#content-right img {
+  width: 65%;
+}
+
+#result {
+  display: none;
+  margin: auto;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 740px) {
+  #result {
+    width: 15%;
+  }
+}
+#result #qrCode {
+  margin-bottom: 15px;
+  width: 100%;
+}
+#result #qrCode img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#resultButtons {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+#resultButtons .resultButton {
+  color: white;
+  font-family: "Kanit", Verdana, sans-serif;
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 2px 15px;
+  text-align: center;
+}
+#resultButtons #saveButton {
+  background-color: rgb(44, 154, 44);
+  width: 55%;
+}
+#resultButtons #saveButton:hover {
+  background-color: rgb(32, 110, 32);
+}
+#resultButtons #clearButton {
+  background-color: rgb(55, 55, 55);
+  width: 40%;
+}
+#resultButtons #clearButton:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#spinner {
+  display: none;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 100px 0;
+}
+#spinner #spinnerWheel {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 7px solid rgba(55, 55, 55, 0.3);
+  border-top: 7px solid rgb(55, 55, 55);
+  -webkit-animation: spin 0.6s linear infinite;
+          animation: spin 0.6s linear infinite;
+  margin-bottom: 10px;
+}
+#spinner #spinnerText {
+  font-family: "Jost", Verdana, sans-serif;
+  font-size: 1.2em;
+}/*# sourceMappingURL=style.css.map */
